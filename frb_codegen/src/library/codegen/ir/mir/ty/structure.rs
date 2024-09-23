@@ -71,6 +71,12 @@ impl MirStruct {
         self.dart_metadata.iter().any(|it| it.content == "freezed")
     }
 
+    pub fn using_json_serializable(&self) -> bool {
+        self.dart_metadata
+            .iter()
+            .any(|it| it.content == "json_serializable")
+    }
+
     pub fn is_empty(&self) -> bool {
         self.fields.is_empty()
     }

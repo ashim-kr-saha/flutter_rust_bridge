@@ -45,6 +45,7 @@ impl<'a> ApiDartGeneratorClassTrait for StructRefApiDartGenerator<'a> {
                     constructor_postfix,
                     extra_body,
                     class_name,
+                    src.using_json_serializable(),
                 )
             } else {
                 self.generate_mode_non_freezed(
@@ -59,6 +60,7 @@ impl<'a> ApiDartGeneratorClassTrait for StructRefApiDartGenerator<'a> {
             },
             needs_freezed: src.using_freezed(),
             header: methods.header + extra_code.header,
+            needs_json_serializable: src.using_json_serializable(),
         })
     }
 }

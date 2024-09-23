@@ -36,6 +36,7 @@ impl<'a> EnumRefApiDartGenerator<'a> {
             ),
             needs_freezed: false,
             header,
+            needs_json_serializable: false,
         })
     }
 

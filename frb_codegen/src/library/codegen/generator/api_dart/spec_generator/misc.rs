@@ -37,7 +37,13 @@ pub(crate) fn generate_dart_metadata(metadata: &[MirDartAnnotation]) -> String {
             Some(MirDartImport {
                 alias: Some(alias), ..
             }) => format!("@{}.{}", alias, it.content),
-            _ => format!("@{}", it.content),
+            _ => {
+                if it.content == "json_serializable" {
+                    "".to_string()
+                } else {
+                    format!("@{}", it.content)
+                }
+            }
         })
         .collect_vec()
         .join("\n");

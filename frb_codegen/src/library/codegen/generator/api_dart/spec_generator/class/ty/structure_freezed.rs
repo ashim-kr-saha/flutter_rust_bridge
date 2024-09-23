@@ -19,6 +19,7 @@ impl<'a> StructRefApiDartGenerator<'a> {
         constructor_postfix: &str,
         extra_body: &str,
         class_name: &str,
+        need_json_serializable: bool,
     ) -> String {
         let private_constructor = if methods.num_methods > 0 {
             format!("const {}._();", self.mir.ident.0.name)
@@ -31,12 +32,20 @@ impl<'a> StructRefApiDartGenerator<'a> {
         let implements_exception = generate_dart_maybe_implements_exception(self.mir.is_exception);
         let methods_str = &methods.code;
 
+        let mut json_annotation = "".to_string();
+        if need_json_serializable {
+            json_annotation = format!(
+                "factory {class_name}.fromJson(Map<String, dynamic> json) => _${class_name}FromJson(json);"
+            );
+        }
+
         format!(
             "{comments}{metadata}class {class_name} with _${class_name} {implements_exception} {{
                 {private_constructor}
                 const factory {class_name}{constructor_postfix}({{{constructor_params}}}) = _{class_name};
                 {methods_str}
                 {extra_body}
+                {json_annotation}
             }}",
         )
     }

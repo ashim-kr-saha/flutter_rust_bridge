@@ -90,3 +90,25 @@ class UserId with _$UserId {
   }) = _UserId;
 }
 ```
+		
+### Example 3: Json Serializable
+`json_serializable` will generate `fromJson` and `toJson` methods for you. We need to add `#[frb(dart_metadata=("freezed", "json_serializable"))]` to the struct. For more details, please refer [here](https://pub.dev/packages/freezed#fromjsontojson).
+```rust
+#[frb(dart_metadata=("freezed", "json_serializable"))]
+pub struct User {
+    pub id: u32,
+}
+```
+Becomes:
+```dart
+import 'package:json_annotation/json_annotation.dart';
+part 'user.freezed.dart';
+part 'user.g.dart';
+@freezed
+class User with _$User {
+  const factory User({
+    required int id,
+  }) = _User;
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+}
+```

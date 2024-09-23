@@ -45,6 +45,7 @@ pub(crate) struct ApiDartOutputSpecItem {
     pub preamble: String,
     pub skips: Vec<IrSkip>,
     pub needs_freezed: bool,
+    pub needs_json_serializable: bool,
 }
 
 pub(crate) fn generate(
@@ -139,6 +140,8 @@ fn generate_item(
 
     let needs_freezed = classes.iter().any(|class| class.needs_freezed);
 
+    let needs_json_serializable = classes.iter().any(|class| class.needs_json_serializable);
+
     Ok(ApiDartOutputSpecItem {
         funcs,
         classes,
@@ -147,6 +150,7 @@ fn generate_item(
         preamble: context.config.dart_preamble.clone(),
         skips: compute_skips(context.mir_pack, namespace),
         needs_freezed,
+        needs_json_serializable,
     })
 }
 
