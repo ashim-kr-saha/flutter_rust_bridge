@@ -34,6 +34,7 @@ import 'api/external_impl.dart';
 import 'api/external_type_in_crate.dart';
 import 'api/impl_trait.dart';
 import 'api/inside_macro.dart';
+import 'api/json_serializable.dart';
 import 'api/lifetimeable.dart';
 import 'api/map_and_set.dart';
 import 'api/method.dart';
@@ -85,6 +86,8 @@ import 'api/pseudo_manual/exception_twin_sync.dart';
 import 'api/pseudo_manual/external_type_in_crate_twin_rust_async.dart';
 import 'api/pseudo_manual/external_type_in_crate_twin_sync.dart';
 import 'api/pseudo_manual/impl_trait_twin_sync.dart';
+import 'api/pseudo_manual/json_serializable_twin_rust_async.dart';
+import 'api/pseudo_manual/json_serializable_twin_sync.dart';
 import 'api/pseudo_manual/lifetimeable_twin_sync.dart';
 import 'api/pseudo_manual/map_and_set_twin_rust_async.dart';
 import 'api/pseudo_manual/map_and_set_twin_sync.dart';
@@ -2827,6 +2830,21 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
   SomeStructTwinSync dco_decode_box_autoadd_some_struct_twin_sync(dynamic raw);
 
   @protected
+  StructForJsonSerializableTwinNormal
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_normal(
+          dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_rust_async(
+          dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_sync(
+          dynamic raw);
+
+  @protected
   StructInLowerLevel dco_decode_box_autoadd_struct_in_lower_level(dynamic raw);
 
   @protected
@@ -4735,6 +4753,18 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   StaticOnlyTwinSync dco_decode_static_only_twin_sync(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinNormal
+      dco_decode_struct_for_json_serializable_twin_normal(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      dco_decode_struct_for_json_serializable_twin_rust_async(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      dco_decode_struct_for_json_serializable_twin_sync(dynamic raw);
 
   @protected
   StructInLowerLevel dco_decode_struct_in_lower_level(dynamic raw);
@@ -7440,6 +7470,21 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
       SseDeserializer deserializer);
 
   @protected
+  StructForJsonSerializableTwinNormal
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_normal(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_rust_async(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_sync(
+          SseDeserializer deserializer);
+
+  @protected
   StructInLowerLevel sse_decode_box_autoadd_struct_in_lower_level(
       SseDeserializer deserializer);
 
@@ -9611,6 +9656,21 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
   @protected
   StaticOnlyTwinSync sse_decode_static_only_twin_sync(
       SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinNormal
+      sse_decode_struct_for_json_serializable_twin_normal(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      sse_decode_struct_for_json_serializable_twin_rust_async(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      sse_decode_struct_for_json_serializable_twin_sync(
+          SseDeserializer deserializer);
 
   @protected
   StructInLowerLevel sse_decode_struct_in_lower_level(
@@ -12393,6 +12453,18 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
       SomeStructTwinSync self, SseSerializer serializer);
 
   @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_normal(
+      StructForJsonSerializableTwinNormal self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_rust_async(
+      StructForJsonSerializableTwinRustAsync self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_sync(
+      StructForJsonSerializableTwinSync self, SseSerializer serializer);
+
+  @protected
   void sse_encode_box_autoadd_struct_in_lower_level(
       StructInLowerLevel self, SseSerializer serializer);
 
@@ -14500,6 +14572,18 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
   @protected
   void sse_encode_static_only_twin_sync(
       StaticOnlyTwinSync self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_normal(
+      StructForJsonSerializableTwinNormal self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_rust_async(
+      StructForJsonSerializableTwinRustAsync self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_sync(
+      StructForJsonSerializableTwinSync self, SseSerializer serializer);
 
   @protected
   void sse_encode_struct_in_lower_level(
