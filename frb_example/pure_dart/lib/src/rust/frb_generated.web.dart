@@ -35,6 +35,7 @@ import 'api/external_impl.dart';
 import 'api/external_type_in_crate.dart';
 import 'api/impl_trait.dart';
 import 'api/inside_macro.dart';
+import 'api/json_serializable.dart';
 import 'api/lifetimeable.dart';
 import 'api/map_and_set.dart';
 import 'api/method.dart';
@@ -138,6 +139,11 @@ import 'api/pseudo_manual/external_type_in_crate_twin_sync_sse.dart';
 import 'api/pseudo_manual/impl_trait_twin_sse.dart';
 import 'api/pseudo_manual/impl_trait_twin_sync.dart';
 import 'api/pseudo_manual/impl_trait_twin_sync_sse.dart';
+import 'api/pseudo_manual/json_serializable_twin_rust_async.dart';
+import 'api/pseudo_manual/json_serializable_twin_rust_async_sse.dart';
+import 'api/pseudo_manual/json_serializable_twin_sse.dart';
+import 'api/pseudo_manual/json_serializable_twin_sync.dart';
+import 'api/pseudo_manual/json_serializable_twin_sync_sse.dart';
 import 'api/pseudo_manual/lifetimeable_twin_sync.dart';
 import 'api/pseudo_manual/map_and_set_twin_rust_async.dart';
 import 'api/pseudo_manual/map_and_set_twin_rust_async_sse.dart';
@@ -5953,6 +5959,35 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
       dynamic raw);
 
   @protected
+  StructForJsonSerializableTwinNormal
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_normal(
+          dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_rust_async(
+          dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinRustAsyncSse
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_rust_async_sse(
+          dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSse
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_sse(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_sync(
+          dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSyncSse
+      dco_decode_box_autoadd_struct_for_json_serializable_twin_sync_sse(
+          dynamic raw);
+
+  @protected
   StructInLowerLevel dco_decode_box_autoadd_struct_in_lower_level(dynamic raw);
 
   @protected
@@ -9596,6 +9631,30 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
 
   @protected
   StaticOnlyTwinSyncSse dco_decode_static_only_twin_sync_sse(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinNormal
+      dco_decode_struct_for_json_serializable_twin_normal(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      dco_decode_struct_for_json_serializable_twin_rust_async(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinRustAsyncSse
+      dco_decode_struct_for_json_serializable_twin_rust_async_sse(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSse
+      dco_decode_struct_for_json_serializable_twin_sse(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      dco_decode_struct_for_json_serializable_twin_sync(dynamic raw);
+
+  @protected
+  StructForJsonSerializableTwinSyncSse
+      dco_decode_struct_for_json_serializable_twin_sync_sse(dynamic raw);
 
   @protected
   StructInLowerLevel dco_decode_struct_in_lower_level(dynamic raw);
@@ -15147,6 +15206,36 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
       SseDeserializer deserializer);
 
   @protected
+  StructForJsonSerializableTwinNormal
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_normal(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_rust_async(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinRustAsyncSse
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_rust_async_sse(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSse
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_sse(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_sync(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSyncSse
+      sse_decode_box_autoadd_struct_for_json_serializable_twin_sync_sse(
+          SseDeserializer deserializer);
+
+  @protected
   StructInLowerLevel sse_decode_box_autoadd_struct_in_lower_level(
       SseDeserializer deserializer);
 
@@ -19288,6 +19377,36 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
       SseDeserializer deserializer);
 
   @protected
+  StructForJsonSerializableTwinNormal
+      sse_decode_struct_for_json_serializable_twin_normal(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinRustAsync
+      sse_decode_struct_for_json_serializable_twin_rust_async(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinRustAsyncSse
+      sse_decode_struct_for_json_serializable_twin_rust_async_sse(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSse
+      sse_decode_struct_for_json_serializable_twin_sse(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSync
+      sse_decode_struct_for_json_serializable_twin_sync(
+          SseDeserializer deserializer);
+
+  @protected
+  StructForJsonSerializableTwinSyncSse
+      sse_decode_struct_for_json_serializable_twin_sync_sse(
+          SseDeserializer deserializer);
+
+  @protected
   StructInLowerLevel sse_decode_struct_in_lower_level(
       SseDeserializer deserializer);
 
@@ -22483,6 +22602,27 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
   JSAny cst_encode_box_autoadd_some_struct_twin_sync(SomeStructTwinSync raw) {
     // Codec=Cst (C-struct based), see doc to use other codecs
     return cst_encode_some_struct_twin_sync(raw);
+  }
+
+  @protected
+  JSAny cst_encode_box_autoadd_struct_for_json_serializable_twin_normal(
+      StructForJsonSerializableTwinNormal raw) {
+    // Codec=Cst (C-struct based), see doc to use other codecs
+    return cst_encode_struct_for_json_serializable_twin_normal(raw);
+  }
+
+  @protected
+  JSAny cst_encode_box_autoadd_struct_for_json_serializable_twin_rust_async(
+      StructForJsonSerializableTwinRustAsync raw) {
+    // Codec=Cst (C-struct based), see doc to use other codecs
+    return cst_encode_struct_for_json_serializable_twin_rust_async(raw);
+  }
+
+  @protected
+  JSAny cst_encode_box_autoadd_struct_for_json_serializable_twin_sync(
+      StructForJsonSerializableTwinSync raw) {
+    // Codec=Cst (C-struct based), see doc to use other codecs
+    return cst_encode_struct_for_json_serializable_twin_sync(raw);
   }
 
   @protected
@@ -27426,6 +27566,27 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
   JSAny cst_encode_static_only_twin_sync(StaticOnlyTwinSync raw) {
     // Codec=Cst (C-struct based), see doc to use other codecs
     return [cst_encode_String(raw.one)].jsify()!;
+  }
+
+  @protected
+  JSAny cst_encode_struct_for_json_serializable_twin_normal(
+      StructForJsonSerializableTwinNormal raw) {
+    // Codec=Cst (C-struct based), see doc to use other codecs
+    return [cst_encode_String(raw.name), cst_encode_i_32(raw.age)].jsify()!;
+  }
+
+  @protected
+  JSAny cst_encode_struct_for_json_serializable_twin_rust_async(
+      StructForJsonSerializableTwinRustAsync raw) {
+    // Codec=Cst (C-struct based), see doc to use other codecs
+    return [cst_encode_String(raw.name), cst_encode_i_32(raw.age)].jsify()!;
+  }
+
+  @protected
+  JSAny cst_encode_struct_for_json_serializable_twin_sync(
+      StructForJsonSerializableTwinSync raw) {
+    // Codec=Cst (C-struct based), see doc to use other codecs
+    return [cst_encode_String(raw.name), cst_encode_i_32(raw.age)].jsify()!;
   }
 
   @protected
@@ -34404,6 +34565,30 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
       SomeStructTwinSyncSse self, SseSerializer serializer);
 
   @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_normal(
+      StructForJsonSerializableTwinNormal self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_rust_async(
+      StructForJsonSerializableTwinRustAsync self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_rust_async_sse(
+      StructForJsonSerializableTwinRustAsyncSse self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_sse(
+      StructForJsonSerializableTwinSse self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_sync(
+      StructForJsonSerializableTwinSync self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_box_autoadd_struct_for_json_serializable_twin_sync_sse(
+      StructForJsonSerializableTwinSyncSse self, SseSerializer serializer);
+
+  @protected
   void sse_encode_box_autoadd_struct_in_lower_level(
       StructInLowerLevel self, SseSerializer serializer);
 
@@ -38344,6 +38529,30 @@ abstract class RustLibApiImplPlatform extends BaseApiImpl<RustLibWire> {
       StaticOnlyTwinSyncSse self, SseSerializer serializer);
 
   @protected
+  void sse_encode_struct_for_json_serializable_twin_normal(
+      StructForJsonSerializableTwinNormal self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_rust_async(
+      StructForJsonSerializableTwinRustAsync self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_rust_async_sse(
+      StructForJsonSerializableTwinRustAsyncSse self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_sse(
+      StructForJsonSerializableTwinSse self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_sync(
+      StructForJsonSerializableTwinSync self, SseSerializer serializer);
+
+  @protected
+  void sse_encode_struct_for_json_serializable_twin_sync_sse(
+      StructForJsonSerializableTwinSyncSse self, SseSerializer serializer);
+
+  @protected
   void sse_encode_struct_in_lower_level(
       StructInLowerLevel self, SseSerializer serializer);
 
@@ -40000,6 +40209,18 @@ class RustLibWire implements BaseWire {
           NativePortType port_, JSAny arg) =>
       wasmModule.wire__crate__api__inside_macro__func_macro_struct_twin_normal(
           port_, arg);
+
+  void wire__crate__api__json_serializable__struct_for_json_serializable_twin_normal_details_twin_normal(
+          NativePortType port_, JSAny that) =>
+      wasmModule
+          .wire__crate__api__json_serializable__struct_for_json_serializable_twin_normal_details_twin_normal(
+              port_, that);
+
+  void wire__crate__api__json_serializable__struct_for_json_serializable_twin_normal_new_twin_normal(
+          NativePortType port_, String name, int age) =>
+      wasmModule
+          .wire__crate__api__json_serializable__struct_for_json_serializable_twin_normal_new_twin_normal(
+              port_, name, age);
 
   void wire__crate__api__lifetimeable__Lifetimeable_Auto_Owned_RustOpaque_flutter_rust_bridgefor_generatedRustAutoOpaqueInnerLtNestedTypeWithLifetimeTwinNormalstatic_greet_borrow_mut_self_twin_normal(
           NativePortType port_,
@@ -49341,6 +49562,86 @@ class RustLibWire implements BaseWire {
       wasmModule
           .wire__crate__api__pseudo_manual__impl_trait_twin_sync_sse__StructTwoWithTraitTwinSyncSse_simple_trait_fn_with_default_impl_twin_sync_sse(
               port_);
+
+  void wire__crate__api__pseudo_manual__json_serializable_twin_rust_async__struct_for_json_serializable_twin_rust_async_details_twin_rust_async(
+          NativePortType port_, JSAny that) =>
+      wasmModule
+          .wire__crate__api__pseudo_manual__json_serializable_twin_rust_async__struct_for_json_serializable_twin_rust_async_details_twin_rust_async(
+              port_, that);
+
+  void wire__crate__api__pseudo_manual__json_serializable_twin_rust_async__struct_for_json_serializable_twin_rust_async_new_twin_rust_async(
+          NativePortType port_, String name, int age) =>
+      wasmModule
+          .wire__crate__api__pseudo_manual__json_serializable_twin_rust_async__struct_for_json_serializable_twin_rust_async_new_twin_rust_async(
+              port_, name, age);
+
+  void wire__crate__api__pseudo_manual__json_serializable_twin_rust_async_sse__struct_for_json_serializable_twin_rust_async_sse_details_twin_rust_async_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_) =>
+      wasmModule
+          .wire__crate__api__pseudo_manual__json_serializable_twin_rust_async_sse__struct_for_json_serializable_twin_rust_async_sse_details_twin_rust_async_sse(
+              port_, ptr_, rust_vec_len_, data_len_);
+
+  void wire__crate__api__pseudo_manual__json_serializable_twin_rust_async_sse__struct_for_json_serializable_twin_rust_async_sse_new_twin_rust_async_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_) =>
+      wasmModule
+          .wire__crate__api__pseudo_manual__json_serializable_twin_rust_async_sse__struct_for_json_serializable_twin_rust_async_sse_new_twin_rust_async_sse(
+              port_, ptr_, rust_vec_len_, data_len_);
+
+  void wire__crate__api__pseudo_manual__json_serializable_twin_sse__struct_for_json_serializable_twin_sse_details_twin_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_) =>
+      wasmModule
+          .wire__crate__api__pseudo_manual__json_serializable_twin_sse__struct_for_json_serializable_twin_sse_details_twin_sse(
+              port_, ptr_, rust_vec_len_, data_len_);
+
+  void wire__crate__api__pseudo_manual__json_serializable_twin_sse__struct_for_json_serializable_twin_sse_new_twin_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_) =>
+      wasmModule
+          .wire__crate__api__pseudo_manual__json_serializable_twin_sse__struct_for_json_serializable_twin_sse_new_twin_sse(
+              port_, ptr_, rust_vec_len_, data_len_);
+
+  JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartDco */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync__struct_for_json_serializable_twin_sync_details_twin_sync(
+              JSAny that) =>
+          wasmModule
+              .wire__crate__api__pseudo_manual__json_serializable_twin_sync__struct_for_json_serializable_twin_sync_details_twin_sync(
+                  that);
+
+  JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartDco */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync__struct_for_json_serializable_twin_sync_new_twin_sync(
+              String name, int age) =>
+          wasmModule
+              .wire__crate__api__pseudo_manual__json_serializable_twin_sync__struct_for_json_serializable_twin_sync_new_twin_sync(
+                  name, age);
+
+  JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartSse */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync_sse__struct_for_json_serializable_twin_sync_sse_details_twin_sync_sse(
+              PlatformGeneralizedUint8ListPtr ptr_,
+              int rust_vec_len_,
+              int data_len_) =>
+          wasmModule
+              .wire__crate__api__pseudo_manual__json_serializable_twin_sync_sse__struct_for_json_serializable_twin_sync_sse_details_twin_sync_sse(
+                  ptr_, rust_vec_len_, data_len_);
+
+  JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartSse */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync_sse__struct_for_json_serializable_twin_sync_sse_new_twin_sync_sse(
+              PlatformGeneralizedUint8ListPtr ptr_,
+              int rust_vec_len_,
+              int data_len_) =>
+          wasmModule
+              .wire__crate__api__pseudo_manual__json_serializable_twin_sync_sse__struct_for_json_serializable_twin_sync_sse_new_twin_sync_sse(
+                  ptr_, rust_vec_len_, data_len_);
 
   JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartSse */
       wire__crate__api__pseudo_manual__lifetimeable_twin_sync__Lifetimeable_Auto_Owned_RustOpaque_flutter_rust_bridgefor_generatedRustAutoOpaqueInnerLtNestedTypeWithLifetimeTwinSyncstatic_greet_borrow_mut_self_twin_sync(
@@ -62998,6 +63299,14 @@ extension type RustLibWasmModule._(JSObject _) implements JSObject {
       NativePortType port_, JSAny arg);
 
   external void
+      wire__crate__api__json_serializable__struct_for_json_serializable_twin_normal_details_twin_normal(
+          NativePortType port_, JSAny that);
+
+  external void
+      wire__crate__api__json_serializable__struct_for_json_serializable_twin_normal_new_twin_normal(
+          NativePortType port_, String name, int age);
+
+  external void
       wire__crate__api__lifetimeable__Lifetimeable_Auto_Owned_RustOpaque_flutter_rust_bridgefor_generatedRustAutoOpaqueInnerLtNestedTypeWithLifetimeTwinNormalstatic_greet_borrow_mut_self_twin_normal(
           NativePortType port_,
           PlatformGeneralizedUint8ListPtr ptr_,
@@ -69493,6 +69802,62 @@ extension type RustLibWasmModule._(JSObject _) implements JSObject {
   external void
       wire__crate__api__pseudo_manual__impl_trait_twin_sync_sse__StructTwoWithTraitTwinSyncSse_simple_trait_fn_with_default_impl_twin_sync_sse(
           NativePortType port_);
+
+  external void
+      wire__crate__api__pseudo_manual__json_serializable_twin_rust_async__struct_for_json_serializable_twin_rust_async_details_twin_rust_async(
+          NativePortType port_, JSAny that);
+
+  external void
+      wire__crate__api__pseudo_manual__json_serializable_twin_rust_async__struct_for_json_serializable_twin_rust_async_new_twin_rust_async(
+          NativePortType port_, String name, int age);
+
+  external void
+      wire__crate__api__pseudo_manual__json_serializable_twin_rust_async_sse__struct_for_json_serializable_twin_rust_async_sse_details_twin_rust_async_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_);
+
+  external void
+      wire__crate__api__pseudo_manual__json_serializable_twin_rust_async_sse__struct_for_json_serializable_twin_rust_async_sse_new_twin_rust_async_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_);
+
+  external void
+      wire__crate__api__pseudo_manual__json_serializable_twin_sse__struct_for_json_serializable_twin_sse_details_twin_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_);
+
+  external void
+      wire__crate__api__pseudo_manual__json_serializable_twin_sse__struct_for_json_serializable_twin_sse_new_twin_sse(
+          NativePortType port_,
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_);
+
+  external JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartDco */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync__struct_for_json_serializable_twin_sync_details_twin_sync(
+          JSAny that);
+
+  external JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartDco */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync__struct_for_json_serializable_twin_sync_new_twin_sync(
+          String name, int age);
+
+  external JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartSse */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync_sse__struct_for_json_serializable_twin_sync_sse_details_twin_sync_sse(
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_);
+
+  external JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartSse */
+      wire__crate__api__pseudo_manual__json_serializable_twin_sync_sse__struct_for_json_serializable_twin_sync_sse_new_twin_sync_sse(
+          PlatformGeneralizedUint8ListPtr ptr_,
+          int rust_vec_len_,
+          int data_len_);
 
   external JSAny? /* flutter_rust_bridge::for_generated::WireSyncRust2DartSse */
       wire__crate__api__pseudo_manual__lifetimeable_twin_sync__Lifetimeable_Auto_Owned_RustOpaque_flutter_rust_bridgefor_generatedRustAutoOpaqueInnerLtNestedTypeWithLifetimeTwinSyncstatic_greet_borrow_mut_self_twin_sync(
